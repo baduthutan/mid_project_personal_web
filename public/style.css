@@ -1,6 +1,6 @@
 html {
-    scroll-behavior: smooth;
     -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
     scroll-padding: 80px;
   }
   
@@ -18,8 +18,9 @@ html {
   }
   .jumbotron .nav-item:hover, .jumbotron-info a:hover, .amazing-card a:hover, .project-card a:hover{
       text-decoration: underline 2px;
-      transition: 0.3s !important;
       -webkit-transition: 0.3s !important;
+      transition: 0.3s !important;
+      
   }
   
   .jumbotron-info p{
@@ -45,14 +46,14 @@ html {
   }
   
   .jumbotext span{
-      transition: 1s;
-      -webkit-transition: 1s;   
+    -webkit-transition: 1s;
+      transition: 1s;        
   }
   
   .jumbotext span:hover{
       color: rgb(171, 136, 246);
-      transition: 1s;
       -webkit-transition: 1s;
+      transition: 1s;     
   }
   
   .boton{
@@ -136,13 +137,13 @@ html {
       color: white;
       background-color: rgba(33, 37, 41,0.5);
       opacity: 0;
-      transition: 0.3s;
       -webkit-transition: 0.3s;
+      transition: 0.3s;
   }
   
   .img-modal:hover{
+    -webkit-transition: 0.3s;
       transition: 0.3s;
-      -webkit-transition: 0.3s;
       opacity: 1;
   }
   
@@ -161,8 +162,8 @@ html {
   }
   
   .exp-card{
+    -webkit-transition: 0.5s;
       transition: 0.5s;
-      -webkit-transition: 0.5s;
   }
   
   .exp-card:hover{
@@ -320,18 +321,18 @@ html {
     
     @keyframes slide {
       0% {
-        transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
       }
       100% {
-        transform: translate3d(-1719px, 0, 0); /* The image width */
         -webkit-transform: translate3d(-1719px, 0, 0); /* The image width */
+        transform: translate3d(-1719px, 0, 0); /* The image width */
       }
     }
   
     .slider img {
       height: 100px;
       margin-left: 100px;
-      animation: slide 25s linear infinite;
       -webkit-animation: slide 25s linear infinite;
+      animation: slide 25s linear infinite;
     }

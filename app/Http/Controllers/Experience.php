@@ -44,7 +44,6 @@ class Experience extends Controller
             'picture'=>$request->img
           ];
           Experiences::create($data1);
-        //   error_log($request->nm);
           return redirect('/experience')->with('status', $request->nm. ' berhasil ditambahkan');
     }
 
