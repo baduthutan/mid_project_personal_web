@@ -61,7 +61,7 @@
         text-overflow: ellipsis;
     }
     .img-footer{
-        background-image: url('footerImg.webp');
+        background-image: url('footerImg.png');
         background-position: center;
         background-size: cover;
     }

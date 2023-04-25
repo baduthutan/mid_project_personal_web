@@ -14,7 +14,7 @@
 </head>
     <body onload="myFunction()">
         <nav class="navbar navbar-expand-lg fixed-top shadow bg-light d-flex align-items-center px-4 px-md-5" id="navbar">
-            <a href="{{url('/')}}" class="navbar-brand me-auto" style="font-family: 'Ubuntu';">
+            <a href="https://vinchenamigo.site/" class="navbar-brand me-auto" style="font-family: 'Ubuntu';">
                 <img src="logo.png" width="32" alt="logo" class="d-inline-block align-text-center">
                 <span class="ms-1">Vinchen Amigo</span> 
             </a>

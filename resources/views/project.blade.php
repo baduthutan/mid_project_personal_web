@@ -138,9 +138,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary float-end rounded-pill">Submit</button>
                   </form>
-    
                 </div>
-                
               </div>
             </div>
           </div>
