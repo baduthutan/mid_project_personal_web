@@ -1,0 +1,337 @@
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    scroll-padding: 80px;
+  }
+  
+  body{
+      font-family: 'Anek Latin', sans-serif;
+  }
+  
+  .card{
+      border-style: none;
+      overflow: hidden;
+  }
+  
+  .jumbotron .card{
+      background-color: #EFE8FF;
+  }
+  .jumbotron .nav-item:hover, .jumbotron-info a:hover, .amazing-card a:hover, .project-card a:hover{
+      text-decoration: underline 2px;
+      transition: 0.3s !important;
+      -webkit-transition: 0.3s !important;
+  }
+  
+  .jumbotron-info p{
+      font-size: 16px;
+      font-weight: 300;
+      text-shadow: 0px 2px 2px rgba(171, 136, 246,.5);
+  }
+  
+  .jumbotron-info a, .amazing-card a, .project-card a{
+      text-decoration: none;
+      color: #212529;
+  }
+  
+  .jumbotron-info h4{
+      font-size: 18px;
+  }
+  
+  .jumbotext{
+      font-weight: 500;
+      font-size: 9.5vw;
+      color: rgb(220, 204, 255);
+      line-height: 0.85;
+  }
+  
+  .jumbotext span{
+      transition: 1s;
+      -webkit-transition: 1s;   
+  }
+  
+  .jumbotext span:hover{
+      color: rgb(171, 136, 246);
+      transition: 1s;
+      -webkit-transition: 1s;
+  }
+  
+  .boton{
+      background-color: #212529;
+      border-radius: 10px;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      transition: .5s;
+      color: #ffffff;
+  }
+  .boton:hover {
+      background-color: rgb(171, 136, 246);
+      color: #ffffff;
+      /* border-color: #212529; */
+  }
+  
+  .main-row h2{
+      font-size: 64px;
+      color: white;
+      line-height: 0.85;
+  }
+  
+  .main-row h3, .second-row h3, .working-with h3{
+      font-size: 32px;
+      color: #212529;
+      line-height: 0.85;
+  }
+  
+  .main-row p{
+      font-size: 12px;
+      color: white;
+  }
+  
+  .main-row .amazing-card p{
+      color: #212529;
+  }
+  
+  .weare-card, .amazing-card{
+      overflow: hidden;
+  }
+  .letstalk-button a{
+      background-color: #BFEE61;
+      box-shadow: 0 8px 20px white;
+  }
+  .letstalk-button a:hover{
+      background-color: white;
+      box-shadow: 0 8px 20px #BFEE61;
+  }
+  
+  .about-us{
+      background-color: rgb(171, 136, 246);
+      color: white;
+      scroll-snap-align: start;
+  }
+  
+  .about-us h3{
+      color: white;
+  }
+  
+  .fa-arrow-right{
+      transform: rotate(-45deg);
+  }
+  
+  .img-card{
+      background-position: center;
+      background-size: cover;
+  }
+  
+  .card-image{
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 50%;
+  }
+  .card-image img{
+      margin-bottom: -80px;
+  }
+  .img-modal{
+      color: white;
+      background-color: rgba(33, 37, 41,0.5);
+      opacity: 0;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+  }
+  
+  .img-modal:hover{
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      opacity: 1;
+  }
+  
+  .footer-row{
+      color: white;
+  }
+  .footer-row h2{
+      font-size: 64px;
+  }
+  
+  .footer-row hr{
+      height: 5px;
+      width: 25%;
+      background-color: white;
+      opacity: 100%;
+  }
+  
+  .exp-card{
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+  }
+  
+  .exp-card:hover{
+      background-color: rgb(220, 204, 255) !important;
+      transition: 0.5s;
+  }
+  
+  /* .exp-card .btn{
+      background-color:rgb(171, 136, 246);
+      color: white;
+      transition: 0.5s;
+  }
+  
+  .exp-card .btn:hover{
+      background-color:rgba(171, 136, 246, 0.7);
+      color: #212529;
+      transition: 0.5s;
+  } */
+   @keyframes scroll-down{
+              0%{
+                  margin-top: -0px;
+              }
+              25%{
+                  margin-top: -106px;
+              }
+              50%{
+                  margin-top: -212px;
+              }
+              75%{
+                  margin-top: -318px;
+              }
+          }
+  @media screen and (min-width: 576px) {
+      
+      .jumbotron-info p{
+          font-size: 20px;
+      }
+      .jumbotron-info h4{
+          font-size: 24px;
+      }
+      .about-us{
+          scroll-snap-align: center;
+      }
+      .scroll-col{
+          height:290px;
+      }
+      .about-us h4{
+          font-size: 2.8vw;
+      }
+      .card-image img{
+          margin-bottom: -140px;
+      }
+      .scroll-col .about-us:first-child{
+              margin-top: 48px;
+          }
+       @keyframes scroll-down{
+              0%{
+                  margin-top: 48px;
+              }
+              25%{
+                  margin-top: -138px;
+              }
+              50%{
+                  margin-top: -324px;
+              }
+              75%{
+                  margin-top: -510px;
+              }
+          }
+      
+  }
+  @media screen and (min-width: 768px) {
+      .jumbotron-info p{
+          font-size: 24px;
+      }
+      .jumbotron-info h4{
+          font-size: 28px;
+      }
+      .jumbo-image{
+          position: absolute;
+          z-index: 2;
+          bottom: 0;
+          left: 50%;
+      }
+  
+      .main-row h2, .footer-row h2{
+          font-size: 80px;
+      }
+      .main-row h3, .second-row h3, .working-with h3{
+          font-size: 48px;
+      }
+      .main-row p{
+          font-size: 16px;
+      }
+      .scroll-col{
+          height:370px;
+      }
+      .card-image img{
+          margin-bottom: -260px;
+      }
+  }
+  
+  @media screen and (min-width: 992px) {
+      .main-row h2, .footer-row h2{
+          font-size: 96px;
+      }
+      .main-row h3, .second-row h3, .working-with h3{
+          font-size: 64px;
+      }
+      .main-row p{
+          font-size: 24px;
+      }
+      .jumbotron .card,.footer-row, .second-row, .about-us, .weare-card, .amazing-card{
+          opacity: 0;
+      }
+      .scroll-col, .about-us{
+          height:162px;
+      }
+      .about-us h4{
+          margin-top: 16px;
+      }
+      .card-image img{
+          margin-bottom: -80px;
+      }
+      .scroll-col .about-us:first-child{
+              margin-top: 0px;
+          }
+      @keyframes scroll-down{
+              0%{
+                  margin-top: -0px;
+              }
+              25%{
+                  margin-top: -186px;
+              }
+              50%{
+                  margin-top: -372px;
+              }
+              75%{
+                  margin-top: -558px;
+              }
+          }
+      
+  }
+  
+     
+  
+  
+  .slider {
+      overflow: hidden;
+      display: flex;
+      height: 100px;
+      width: 1600px;
+      margin: 0 auto;
+    }
+    
+    @keyframes slide {
+      0% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-1719px, 0, 0); /* The image width */
+        -webkit-transform: translate3d(-1719px, 0, 0); /* The image width */
+      }
+    }
+  
+    .slider img {
+      height: 100px;
+      margin-left: 100px;
+      animation: slide 25s linear infinite;
+      -webkit-animation: slide 25s linear infinite;
+    }
