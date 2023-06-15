@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Projects;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 
 class Project extends Controller
 {
@@ -41,9 +43,16 @@ class Project extends Controller
             'name' => $request->nm,
             'link'=> $request->link,
             'detail'=>$request->dt,     
-            'picture'=>$request->img
+            'picture'=>$request->img,
+            'type'=>$request->typ
           ];
+
+          if($path = $request->file('img')->store('toPath',['disk' => 'my_files'])) {
+            $data1['picture'] = $path;
+
+          }
           Projects::create($data1);
+        //   Storage::put($request->img,file_get_contents($request->file('files')->getRealPath()));
         //   error_log($request->nm);
           return redirect('/project')->with('status', $request->nm. ' berhasil ditambahkan');
     }
@@ -83,8 +92,11 @@ class Project extends Controller
             'name' => $request->nm,
             'link'=> $request->link,
             'detail'=>$request->dt,     
-            'picture'=>$request->img
+            'picture'=>$request->img,
+            'type'=>$request->typ
         ]);
+        // Storage::put(, $contents);;
+        //   error_log($request->nm);
         return redirect('/project')->with('status', $request->nm. ' berhasil diedit');
     }
 

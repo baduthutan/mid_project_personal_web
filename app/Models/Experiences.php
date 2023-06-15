@@ -10,9 +10,10 @@ class Experiences extends Model
     use HasFactory;
 
      // nama tabel
+     
      protected $table = 'experiences';
      // inisiasi primary key
-     protected $primary_key = 'ID';
+     protected $primary_key = 'id';
      
      // unable colom timestamp
      public $timestamps = false;

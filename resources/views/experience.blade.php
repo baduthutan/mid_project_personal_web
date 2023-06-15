@@ -39,14 +39,14 @@
                 </div>
                 @if(Session::get('Username') != NULL)
                 <div class="btn-group">
-                    <button class="btn btn-warning rounded-0" data-bs-toggle="modal" data-bs-target="#editModal{{$experience->ID}}">
+                    <button class="btn btn-warning rounded-0" data-bs-toggle="modal" data-bs-target="#editModal{{$experience->id}}">
                         Edit
                     </button>
-                    <button class="btn btn-danger rounded-0" data-bs-toggle="modal" data-bs-target="#delModal{{$experience->ID}}">
+                    <button class="btn btn-danger rounded-0" data-bs-toggle="modal" data-bs-target="#delModal{{$experience->id}}">
                         Delete
                     </button>      
                 </div>
-                <div class="modal fade" id="delModal{{$experience->ID}}"aria-hidden="true" style="display: none;">
+                <div class="modal fade" id="delModal{{$experience->id}}"aria-hidden="true" style="display: none;">
                     <div class="modal-dialog">
                         <div class="modal-content rounded-5">
                             <div class="modal-header">
@@ -55,7 +55,7 @@
                                 </div>
                             <div class="modal-body">
                                 <h5>Are you sure want to delete this experience?</h5>
-                                <form method="POST" action="{{ url('/experience/'.$experience->ID) }}">
+                                <form method="POST" action="{{ url('/experience/'.$experience->id) }}">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="button submit"class="btn btn-danger rounded-pill">Delete</button>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="editModal{{$experience->ID}}"aria-hidden="true" style="display: none;">
+                <div class="modal fade" id="editModal{{$experience->id}}"aria-hidden="true" style="display: none;">
                     <div class="modal-dialog">
                       <div class="modal-content rounded-5">
                         <div class="modal-header">
@@ -72,7 +72,7 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form method="POST" action="{{ url('/experience/'.$experience->ID) }}">
+                          <form method="POST" action="{{ url('/experience/'.$experience->id) }}">
                             @method('PATCH')
                             @csrf
                             <div class="mb-3">

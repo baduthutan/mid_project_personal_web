@@ -1,11 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Models\Experiences;
 use App\Models\Projects;
-use App\Http\Controllers\Experience;
-use App\Http\Controllers\Project;
+use App\Models\Experiences;
+use App\Models\ProjectType;
 use App\Http\Controllers\Auth;
+use App\Http\Controllers\Project;
+use App\Http\Controllers\Experience;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,9 +40,9 @@ Route::patch('/experience/{experience}', [Experience::class, 'update']);
 Route::delete('/experience/{experience}', [Experience::class, 'destroy']);
 
 Route::get('/project', function () {
-    $data = projects::get();
-
-    return view('project')->with(['projects' => $data]);
+    $data = Projects::get();
+    $data2 = ProjectType::get();
+    return view('project')->with(['projects' => $data, 'projectTypes' => $data2]);
 });
 Route::post('/project', [Project::class, 'store']);
 Route::patch('/project/{project}', [Project::class, 'update']);

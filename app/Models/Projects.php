@@ -22,6 +22,11 @@ class Projects extends Model
          'name',
          'link',
          'detail',
-         'picture'
+         'picture',
+         'type'
      ];
+     public function Type()
+    {
+        return $this->belongsTo('App\Models\ProjectType','type','id');
+    }
 }

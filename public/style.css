@@ -308,8 +308,10 @@ html {
       
   }
   
+     .type-btn{
+        opacity: 0;
+     }
      
-  
   
   .slider {
       overflow: hidden;

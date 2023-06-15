@@ -16,18 +16,18 @@ class Auth extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'username' => 'required|exists:user,username',
+            'username' => 'required',
             'password' => 'required'
         ]);
 
-        $user = User::where('username','=',$request->username)->first();
+        $user = User::where('name','=',$request->username)->first();
         
 
         if($user->password != $request->password)
         {
             return redirect('/login')->with('status','incorrect password');
         } else {
-            Session::put('Username',$user->username);
+            Session::put('Username',$user->name);
             return redirect('/');
         }
     }

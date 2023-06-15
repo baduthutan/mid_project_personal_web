@@ -41,7 +41,7 @@
         @yield('content')
         <script>
             function myFunction(){
-                $('.jumbotron .card, .working-with, .exp-card').css({
+                $('.jumbotron .card, .working-with, .exp-card, .type-btn').css({
                     'opacity' : '1',
                     'transition' : '0.3s'
                 }); 
